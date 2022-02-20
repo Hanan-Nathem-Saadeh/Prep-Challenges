@@ -1,0 +1,67 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "## Hacker Rank\n\nFor Thursdays you will be solving some selected challenges on HackerRank, please create an account if you don't have then\nFollow the links below:\nread them carefully and solve them then copy-paste your solution below in Code Block"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### **Required**:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [Birthday Cake Candles](https://www.hackerrank.com/challenges/birthday-cake-candles/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "'use strict';\n\nconst fs = require('fs');\n\nprocess.stdin.resume();\nprocess.stdin.setEncoding('utf-8');\n\nlet inputString = '';\nlet currentLine = 0;\n\nprocess.stdin.on('data', inputStdin => {\n    inputString += inputStdin;\n});\n\nprocess.stdin.on('end', _ => {\n    inputString = inputString.replace(/\\s*$/, '')\n        .split('\\n')\n        .map(str => str.replace(/\\s*$/, ''));\n\n    main();\n});\n\nfunction readLine() {\n    return inputString[currentLine++];\n}\n\n// Complete the birthdayCakeCandles function below.\nfunction birthdayCakeCandles(ar) {\n    // Write your code here\n    let count = 0;\n    let max = 0;\n    for(let i = 0; i < ar.length ; i++)\n    {\n        let num = ar[i];\n        if(num > max)\n        {\n            max = num;\n            count = 1;\n        }else if(max == num)\n        {\n            count++;\n        }\n    }\n    return count;\n}\n\nfunction main() {\n    const ws = fs.createWriteStream(process.env.OUTPUT_PATH);\n\n    const arCount = parseInt(readLine(), 10);\n\n    const ar = readLine().split(' ').map(arTemp => parseInt(arTemp, 10));\n\n    let result = birthdayCakeCandles(ar);\n\n    ws.write(result + \"\\n\");\n\n    ws.end();\n}\n"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### **Optional**:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [Compare The Triplets](https://www.hackerrank.com/challenges/compare-the-triplets/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                ""
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [Migratory Birds](https://www.hackerrank.com/challenges/migratory-birds/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                ""
+            ],
+            "outputs": []
+        }
+    ]
+}
