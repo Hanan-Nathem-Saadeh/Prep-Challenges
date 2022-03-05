@@ -90,23 +90,18 @@ const objLat = (obj) => {
 //  2- If one of the names is null dont add it to the full name
 
 const cvFormatter = (arr) => {
-    const newArr = [];
-    const filterredArr = arr
-      .filter((e) => {
-        return e.yearsOfExperience > 1;
-      })
-      .forEach((e) => {
-        if (e.lastName === null) delete e.lastName;
-        const j = {
-          fullName: `${
-            e.lastName ? e.firstName + " " + e.lastName : e.firstName
-          }`,
-          tech: e.tech,
-        };
-        newArr.push(j);
-      });
-    return newArr;
-  };
+    let arr2=[]
+   for (let index = 0; index < array.length; index++) {
+if (arr[index].yearsOfExperience>1) {
+    while(arr[index].firstName!=null && arr[index].lastName !=null)
+    {
+
+arr2[index].push(`${arr[index].firstName} ${arr[index].lastName}`,arr[index.tech]);
+    }
+}       
+   }
+return arr2;
+};
   
 // -------------------------------------------------------------------------------------------------------
 
